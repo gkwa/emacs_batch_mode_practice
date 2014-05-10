@@ -1,0 +1,2 @@
+# Minimal emacs test...just enough to test helm or whatever package you load in init.el
+emacs  --no-init-file --load init.el --no-splash
