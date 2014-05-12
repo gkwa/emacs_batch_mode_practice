@@ -1,4 +1,5 @@
 EMACS_PARAMS =
+EMACS_PARAMS += --no-site-lisp
 EMACS_PARAMS += --no-init-file
 EMACS_PARAMS += --load init.el
 EMACS_PARAMS += --no-splash
