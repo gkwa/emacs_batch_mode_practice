@@ -18,11 +18,12 @@
 	  (or (concat elpa-parent "/")
 	      user-emacs-directory)
 	  ".elpa"))
-   (setq package-archives
-	 '(("gnu" . "http://elpa.gnu.org/packages/")
-	   ("melpa" . "http://melpa.milkbox.net/packages/")
-	   ("marmalade" . "http://marmalade-repo.org/packages/")
-	   ("elpa" . "http://tromey.com/elpa/")))
+
+   (setq package-archives ())
+   (add-to-list 'package-archives '("elpa" . "http://tromey.com/elpa/"))
+   (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+   (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+
    (package-initialize)
    (package-refresh-contents)
    (if (and (file-exists-p (expand-file-name package))
