@@ -51,30 +51,6 @@
       )))
 (global-set-key "e" (quote tm-dir-shell-here))
 
-;; ;; ------------------------------
-;; ;; backup-dir
-;; ;; ------------------------------
-;; 					; http://www.emacswiki.org/cgi-bin/wiki?BackupDirectory
-;; (require 'backup-dir)
-;; ;; localize it for safety.
-;; (make-variable-buffer-local 'backup-inhibited)
-;; (if (not (file-directory-p "~/.emacs.d")) (make-directory "~/.emacs.d"))
-;; (if (not (file-directory-p "~/.emacs.d/backups")) (make-directory "~/.emacs.d/backups"))
-;; (setq bkup-backup-directory-info '((t "~/.emacs.d/backups" ok-create full-path prepend-name)))
-;; (setq delete-old-versions t
-;;       kept-old-versions 1
-;;       kept-new-versions 3
-;;       version-control t)
-
-
-;; ------------------------------
-
-;; There is a small bug in Emacs24’s package.el such that the
-;; dependency order comes out backwards. The problem is patched by
-;; some advice.
-
-;; http://melpa.milkbox.net/#/getting-started
-
  (defadvice package-compute-transaction
   (before package-compute-transaction-reverse (package-list requirements) activate compile)
     "reverse the requirements"
