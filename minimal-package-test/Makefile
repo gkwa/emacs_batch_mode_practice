@@ -11,8 +11,9 @@ ifndef V
 endif
 endif
 
+t1: 
 t1:
-	$(QUIET_EMACS)emacs $(EMACS_PARAMS)
+	HOME=$(CURDIR) emacs $(EMACS_PARAMS)
 
 clean:
 	rm -f *~
