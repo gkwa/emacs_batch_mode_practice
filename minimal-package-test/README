@@ -1,2 +1,4 @@
 # Minimal emacs test...just enough to test helm or whatever package you load in init.el
-emacs  --no-init-file --load init.el --no-splash
+HOME=/Users/demo/pdev/emacs_batch_mode_practice/minimal-package-test emacs  --no-site-lisp --no-init-file --load init.el --no-splash
+
+By setting HOME, you test alternate .emacs.d settings.  Emacs will look for $HOME/.emacs.d

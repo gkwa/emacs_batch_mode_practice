@@ -17,3 +17,4 @@ t1:
 
 clean:
 	rm -f *~
+	rm -rf .emacs.d
