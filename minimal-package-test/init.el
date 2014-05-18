@@ -16,7 +16,35 @@
 
 ;; ------------------------------
 
+;; https://www.flickr.com/photos/taylormonacelli/sets/72157644655371733/
+
+(global-set-key (kbd "M-x")                     'helm-M-x)
+(global-set-key (kbd "M-y")                     'helm-show-kill-ring)
+(global-set-key (kbd "C-c f")                   'helm-recentf)
+(global-set-key (kbd "C-x C-f")                 'helm-find-files)
+(global-set-key (kbd "C-c <SPC>")               'helm-all-mark-rings)
+(global-set-key (kbd "C-x r b")                 'helm-filtered-bookmarks)
+(global-set-key (kbd "C-h r")                   'helm-info-emacs)
+(global-set-key (kbd "C-:")                     'helm-eval-expression-with-eldoc)
+(global-set-key (kbd "C-,")                     'helm-calcul-expression)
+(global-set-key (kbd "C-h d")                   'helm-info-at-point)
+(global-set-key (kbd "C-c g")                   'helm-google-suggest)
+(global-set-key (kbd "M-g s")                   'helm-do-grep)
+(global-set-key (kbd "C-x C-d")                 'helm-browse-project)
+(global-set-key (kbd "M-p")                     'helm-resume)
+(global-set-key (kbd "<f1>")                    'helm-resume)
+(global-set-key (kbd "C-h C-f")                 'helm-apropos)
+(global-set-key (kbd "<f5> s")                  'helm-find)
+;(define-key global-map [remap jump-to-register] 'helm-register)
+(define-key global-map [remap list-buffers]     'helm-buffers-list)
+(define-key global-map [remap dabbrev-expand]   'helm-dabbrev)
+(define-key global-map [remap find-tag]         'helm-etags-select)
+;;(define-key shell-mode-map (kbd "M-p")          'helm-comint-input-ring) ; shell history.
+
+;; ------------------------------
+
 (remove-hook 'find-file-hooks 'vc-find-file-hook)
+(global-set-key (kbd "C-[ [ a a") 'helm-for-files)
 
 ;; ------------------------------
 
@@ -74,6 +102,7 @@
 ;; some advice.
 
 ;; http://melpa.milkbox.net/#/getting-started
+
 
  (defadvice package-compute-transaction
   (before package-compute-transaction-reverse (package-list requirements) activate compile)
