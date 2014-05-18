@@ -2,6 +2,14 @@ package:
 	rm -rf mycleantest
 	sh install.sh $@ mycleantest
 
+dirtree:
+	rm -rf mycleantest
+	sh install.sh $@ mycleantest
+
+calfw:
+	rm -rf mycleantest
+	sh install.sh $@ mycleantest
+
 ant:
 	rm -rf mycleantest
 	sh install.sh $@ mycleantest
