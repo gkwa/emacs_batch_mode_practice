@@ -24,6 +24,9 @@
    (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
    (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 
+   ;; http://emacsredux.com/blog/2014/05/16/melpa-stable/
+   (add-to-list 'package-archives '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
+
    (package-initialize)
    (package-refresh-contents)
    (if (and (file-exists-p (expand-file-name package))
