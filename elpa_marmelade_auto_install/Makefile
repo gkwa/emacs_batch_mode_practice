@@ -1,54 +1,17 @@
-package:
-	rm -rf mycleantest
-	sh install.sh $@ mycleantest
+EMACS_SW =
+EMACS_SW += --quick
+EMACS_SW += --batch
+EMACS_SW += --no-window-system
+EMACS_SW += --load emacs-install-clean.el
 
 dirtree:
-	rm -rf mycleantest
-	sh install.sh $@ mycleantest
+	HOME=./mycleantest emacs $(EMACS_SW) --funcall main $@ mycleantest
 
 calfw:
-	rm -rf mycleantest
-	sh install.sh $@ mycleantest
+	HOME=./mycleantest emacs $(EMACS_SW) --funcall main $@ mycleantest
 
-ant:
-	rm -rf mycleantest
-	sh install.sh $@ mycleantest
-
-ag:
-	rm -rf mycleantest
-	sh install.sh $@ mycleantest
-
-ack:
-	rm -rf mycleantest
-	sh install.sh $@ mycleantest
-
-predictive:
-	rm -rf mycleantest
-	sh install.sh $@ mycleantest
-
-tar-mode:
-	rm -rf mycleantest
-	sh install.sh $@ mycleantest
-
-git-rebase-mode:
-	rm -rf mycleantest
-	sh install.sh $@ mycleantest
-
-git-commit-mode:
-	rm -rf mycleantest
-	sh install.sh $@ mycleantest
-
-magit:
-	rm -rf mycleantest
-	sh install.sh $@ mycleantest
-
-helm:
-	rm -rf mycleantest
-	sh install.sh $@ mycleantest
-
-keywiz:
-	rm -rf mycleantest
-	sh install.sh $@ mycleantest
+% ::
+	HOME=./mycleantest emacs $(EMACS_SW) --funcall main $@ mycleantest
 
 clean:
 	rm -rf mycleantest
