@@ -1,4 +1,4 @@
-					; http://stackoverflow.com/questions/10092322/how-to-automatically-install-emacs-packages-by-specifying-a-list-of-package-name
+;; http://stackoverflow.com/questions/10092322/how-to-automatically-install-emacs-packages-by-specifying-a-list-of-package-name
 ;; https://github.com/slipset/emacs/blob/master/ensure-packages.el
 
 (require 'package)
