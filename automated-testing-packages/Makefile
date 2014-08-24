@@ -1,3 +1,6 @@
+test5:
+	emacs --no-init-file --batch -l ./build4.el
+
 test4:
 	emacs --no-init-file --batch -l ./build3.el
 
