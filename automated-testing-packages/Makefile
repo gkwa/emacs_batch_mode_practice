@@ -1,3 +1,6 @@
+test4:
+	emacs --no-init-file --batch -l ./build3.el
+
 test3:
 	emacs --no-init-file --batch -l ./build2.el -- dirtree
 
