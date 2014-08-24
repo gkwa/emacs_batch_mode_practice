@@ -18,21 +18,21 @@
   (progn
     (message "checking")
     (cond ((package-installed-p p) t)
-	  (t nil)))
+	  (t nil))))
 
-  (defun ensure-packages-installed-p ()
-    (mapcar 'ensure-packages-package-installed-p ensure-packages))
+(defun ensure-packages-installed-p ()
+  (mapcar 'ensure-packages-package-installed-p ensure-packages))
 
-  (defun ensure-packages-install-missing ()
-    (interactive)
-    (unless (every 'identity (ensure-packages-installed-p))
-      ;; check for new packages (package versions)
-      (message "%s" "Emacs is now refreshing its package database...")
-      (package-refresh-contents)
-      (message "%s" " done.")
-      ;; install the missing packages
-      (dolist (p ensure-packages)
-	(when (not (package-installed-p p))
-	  (package-install p)))))
+(defun ensure-packages-install-missing ()
+  (interactive)
+  (unless (every 'identity (ensure-packages-installed-p))
+    ;; check for new packages (package versions)
+    (message "%s" "Emacs is now refreshing its package database...")
+    (package-refresh-contents)
+    (message "%s" " done.")
+    ;; install the missing packages
+    (dolist (p ensure-packages)
+      (when (not (package-installed-p p))
+	(package-install p)))))
 
-  (provide 'ensure-packages)
+(provide 'ensure-packages)
