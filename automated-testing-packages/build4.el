@@ -7,7 +7,7 @@
 (setq url-http-attempt-keepalives nil)
 
 (defvar ensure-packages
-  nil
+  'dirtree
   "A list of packages to ensure are installed at launch.")
 
 (defun ensure-packages-package-installed-p (p)
