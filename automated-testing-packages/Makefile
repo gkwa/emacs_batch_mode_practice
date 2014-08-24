@@ -1,5 +1,5 @@
 test:
-	emacs --verbose --batch -l ./build.el -- helm
+	emacs --no-init-file --batch -l ./build.el -- helm
 
 clean:
 	echo no-op
