@@ -4,6 +4,10 @@ EMACS_SW += --batch
 EMACS_SW += --no-window-system
 EMACS_SW += --load emacs-install-clean.el
 
+use-package:
+	git clone http://github.com/edvorg/emacs-configs mycleantest
+	HOME=./mycleantest emacs
+
 tree-mode:
 	HOME=./mycleantest emacs $(EMACS_SW) --funcall main $@ mycleantest
 
