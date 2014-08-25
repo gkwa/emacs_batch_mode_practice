@@ -4,6 +4,9 @@ EMACS_SW += --batch
 EMACS_SW += --no-window-system
 EMACS_SW += --load emacs-install-clean.el
 
+tree-mode:
+	HOME=./mycleantest emacs $(EMACS_SW) --funcall main $@ mycleantest
+
 dirtree:
 	HOME=./mycleantest emacs $(EMACS_SW) --funcall main $@ mycleantest
 
