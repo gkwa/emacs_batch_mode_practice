@@ -1,3 +1,10 @@
+test7:
+	-$(MAKE) test6
+	-$(MAKE) test6
+	-$(MAKE) test6
+	-$(MAKE) test6
+	-$(MAKE) test6
+
 test6:
 	emacs --no-init-file --batch -l ./build5.el
 
