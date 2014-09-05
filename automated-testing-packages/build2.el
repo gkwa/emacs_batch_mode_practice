@@ -2,8 +2,37 @@
 
 (setq jpk-packages
       '(
-        ac-dabbrev
-        yasnippet
+	ggtags
+	helm-gtags
+	bookmark+
+	java-file-create
+	java-snippets
+	javadoc-lookup
+	jump-char
+	jump
+	json-mode
+	javascript
+	helm-chrome
+	helm-chrome
+	ac-helm
+	helm-chrome
+	magit-annex
+	magit-filenotify
+	magit-find-file
+	magit-gerrit
+	magit-gh-pulls
+	magit-gitflow
+	magit-log-edit
+	magit-push-remote
+	magit-simple-keys
+	magit-stgit
+	magit-svn
+	magit-topgit
+	magit-tramp
+	magithub
+	helm
+	iedit
+	magit
         ))
 
 (package-initialize)
